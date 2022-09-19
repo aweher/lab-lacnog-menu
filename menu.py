@@ -21,6 +21,7 @@ class LabMenu(object):
         # Init some values
         for j in range(1, self.cant_asientos+1):
             self.asientos.append(str(j))
+        self.asientos.append("254")
         self.asientos.append("q")
     
     def banner(self, text):
@@ -41,7 +42,7 @@ class LabMenu(object):
     
     def show_connection_menu(self):
         os.system("clear")
-        print(self.banner(f"SEAT {self.mi_asiento}"))
+        print(self.banner(f"SEAT #{self.mi_asiento}"))
         device = 'abc'
         while device not in self.allowed_devices:
             print("Select the device you want to connect to:")
